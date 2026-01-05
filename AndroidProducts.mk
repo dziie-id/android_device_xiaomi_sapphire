@@ -5,4 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/infinity_sapphire.mk
+    $(LOCAL_DIR)/lineage_sapphire.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_sapphire-user \
+    lineage_sapphire-userdebug \
+    lineage_sapphire-eng
