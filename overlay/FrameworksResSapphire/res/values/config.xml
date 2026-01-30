@@ -412,12 +412,11 @@
      <item>2</item>
      <item>3</item>
      -->
-
      
+     <bool name="config_camera_aux_allow_all">true</bool>
      <string-array name="config_camera_aux_package_allowlist" translatable="false">
-     <item>org.lineageos.aperture</item>
+          <item>org.lineageos.aperture</item>
      </string-array>
-     <bool name="config_camera_aux_allow_all">false</bool>
 
      <!--Fix Thermal Throttling UI:
      - Update thermal zone mapping to align with Android 16 sysfs paths.
