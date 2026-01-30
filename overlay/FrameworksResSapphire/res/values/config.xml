@@ -404,6 +404,16 @@
      Also, reported 'Thermal Throttle' warning in Android 16 builds might be related 
      to incorrect thermal zone mapping in sysfs for this specific target.
      -->
+     <!--<string-array name="config_camera_aux_package_allowlist" translatable="false">
+     <item>org.lineageos.aperture</item>
+     </string-array>
+     <string-array name="config_camera_aux_ids" translatable="false">
+     <item>0</item>
+     <item>2</item>
+     <item>3</item>
+     -->
+
+     
      <string-array name="config_camera_aux_package_allowlist" translatable="false">
      <item>org.lineageos.aperture</item>
      </string-array>
@@ -415,7 +425,7 @@
      -->
      <string name="config_thermalFilePath" translatable="false">/sys/class/thermal/thermal_zone0/temp</string>
      <integer name="config_thermalThreshold">45000</integer>
-     
+
      
 
 </resources>
