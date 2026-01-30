@@ -397,4 +397,25 @@
         As of Honeycomb, blurring is not supported anymore. -->
     <bool name="config_sf_slowBlur">false</bool>
 
+     <!--The Aperture camera app currently only shows the main lens (1.0x) because it is 
+     not included in the system's auxiliary camera allowlist. 
+     This commit adds 'org.lineageos.aperture' to the config_camera_aux_package_allowlist 
+     to enable Ultra-wide and Macro lens support on this device.
+     Also, reported 'Thermal Throttle' warning in Android 16 builds might be related 
+     to incorrect thermal zone mapping in sysfs for this specific target.
+     -->
+     <string-array name="config_camera_aux_package_allowlist" translatable="false">
+     <item>org.lineageos.aperture</item>
+     </string-array>
+     <bool name="config_camera_aux_allow_all">false</bool>
+
+     <!--Fix Thermal Throttling UI:
+     - Update thermal zone mapping to align with Android 16 sysfs paths.
+     - Ensure 'config_thermalFilePath' points to the correct battery/skin temperature sensor to prevent Aperture from incorrectly triggering the thermal warning.
+     -->
+     <string name="config_thermalFilePath" translatable="false">/sys/class/thermal/thermal_zone0/temp</string>
+     <integer name="config_thermalThreshold">45000</integer>
+     
+     
+
 </resources>
